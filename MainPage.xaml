@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Maui.AdmobTest.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:admob="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob"
+    BackgroundColor="White">
+    <Grid>
+        <StackLayout VerticalOptions="Start">
+            <Button
+                Margin="10"
+                BorderColor="Blue"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                HeightRequest="50"
+                Text="AdMob IInterstitials Test"
+                TextColor="Black"
+                VerticalOptions="Start" />
+            <Button
+                Margin="10"
+                BorderColor="Blue"
+                BorderWidth="1"
+                Clicked="RewardButton_Clicked"
+                HeightRequest="50"
+                Text="AdMob Reward Test"
+                TextColor="Black"
+                VerticalOptions="Start" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End">
+            <admob:MTAdView
+                x:Name="mtAdView"
+                AdSize="Banner"
+                BackgroundColor="Transparent" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="AdMob Banner Test"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
